@@ -1,3 +1,4 @@
+var text;
 var randomNumber = Math.floor(Math.random() * 10) + 1;
 function MainFunction(){
     input = document.getElementById("input").value;
@@ -6,55 +7,57 @@ function MainFunction(){
 };
 
 
-//#region  switch statments
+//#region switch statments
+
 function MagicResponse(){
-    
-    switch ('8Ball') {
+
+
+    switch (randomNumber) {
+        
         case 1:
-        answer = "Yes"
+        text = "Yes";
         break;
 
         case 2:
-        answer = "No"
+        text = "No";
         break;
 
         case 3:
-        answer = "I dont know that one"
+        text = "I dont know that one";
         break;
 
         case 4:
-        answer = "not sure"
+        text = "not sure";
         break;
 
         case 5:
-        answer = "absolutly"
+        text = "absolutly";
         break;
 
         case 6:
-        answer = "What kind of a question was that"
+        text = "What kind of a question was that";
         break;
 
         case 7:
-        answer = "that somthing you have to find out on your own"
+        text = "that somthing you have to find out on your own";
         break;
 
         case 8:
-        answer = "very likely"
+        text = "very likely";
         break;
 
         case 9:
-        answer = "... ... ..."
+        text = "... ... ...";
         break;
 
-        case 0:
-        answer = "should i even answer that"
+        default:
+        text = "should i even answer that";
         break;
     }
-    document.getElementById("8Ball").innerHTML = input + " was my response";
-    randomNumber = Math.floor(Math.random() * 10) + 1;
-    console.log(input);
 
-    return answer;
+    console.log(input);
+    document.getElementById("ball").innerHTML = input + " was my response";
+
     
 }
 
